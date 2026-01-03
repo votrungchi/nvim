@@ -110,11 +110,13 @@ end, { desc = 'Print the git blame for the current line' })
 vim.cmd('packadd! nohlsearch')
 
 vim.cmd.colorscheme("retrobox")
-vim.opt.tabstop = 4       -- visual width of a real <Tab>
-vim.opt.shiftwidth = 0    -- make >> and << use 'tabstop'
-vim.opt.softtabstop = -1  -- make <Tab> in Insert use 'shiftwidth'
-vim.opt.expandtab = true  -- insert spaces instead of tab characters
-vim.opt.shiftround = true -- round indent to a multiple of shiftwidth
+
+vim.opt.tabstop = 4         -- visual width of a real <Tab>
+vim.opt.shiftwidth = 0      -- make >> and << use 'tabstop'
+vim.opt.softtabstop = -1    -- make <Tab> in Insert use 'shiftwidth'
+vim.opt.expandtab = true    -- insert spaces instead of tab characters
+vim.opt.shiftround = true   -- round indent to a multiple of shiftwidth
+vim.opt.smartindent = true  -- do smart autoindenting when starting a new line
 
 -- Setup lazy.nvim
 require("lazy").setup({
@@ -214,5 +216,9 @@ require("lazy").setup({
   install = { colorscheme = { "retrobox" } },
   -- automatically check for plugin updates
   checker = { enabled = true },
+  rocks = {
+    enabled = false,
+    hererocks = false,
+  }
 })
 
