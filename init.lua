@@ -41,14 +41,18 @@ vim.api.nvim_create_autocmd('BufWritePre', {
 
 -- Keymaps
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>')
-vim.keymap.set({ 't', 'i' }, '<A-h>', '<C-\\><C-n><C-w>h')
-vim.keymap.set({ 't', 'i' }, '<A-j>', '<C-\\><C-n><C-w>j')
-vim.keymap.set({ 't', 'i' }, '<A-k>', '<C-\\><C-n><C-w>k')
-vim.keymap.set({ 't', 'i' }, '<A-l>', '<C-\\><C-n><C-w>l')
-vim.keymap.set({ 'n' }, '<A-h>', '<C-w>h')
-vim.keymap.set({ 'n' }, '<A-j>', '<C-w>j')
-vim.keymap.set({ 'n' }, '<A-k>', '<C-w>k')
-vim.keymap.set({ 'n' }, '<A-l>', '<C-w>l')
+vim.keymap.set({ 't', 'i' }, '<M-h>', '<C-\\><C-n><C-w>h')
+vim.keymap.set({ 't', 'i' }, '<M-j>', '<C-\\><C-n><C-w>j')
+vim.keymap.set({ 't', 'i' }, '<M-k>', '<C-\\><C-n><C-w>k')
+vim.keymap.set({ 't', 'i' }, '<M-l>', '<C-\\><C-n><C-w>l')
+vim.keymap.set({ 'n' }, '<M-h>', '<C-w>h')
+vim.keymap.set({ 'n' }, '<M-j>', '<C-w>j')
+vim.keymap.set({ 'n' }, '<M-k>', '<C-w>k')
+vim.keymap.set({ 'n' }, '<M-l>', '<C-w>l')
+vim.keymap.set({ 'n' }, '<M-Up>', ':resize -3<CR>', { silent = true })
+vim.keymap.set({ 'n' }, '<M-Down>', ':resize +3<CR>', { silent = true })
+vim.keymap.set({ 'n' }, '<M-Left>', ':vertical resize -3<CR>', { silent = true })
+vim.keymap.set({ 'n' }, '<M-Right>', ':vertical resize +3<CR>', { silent = true })
 vim.keymap.set({ 'n' }, '<leader>cc', ':CopilotChat<CR>')
 vim.keymap.set({ 'n' }, '<leader>t', ':terminal<CR>')
 vim.keymap.set({ 'n' }, '<leader>o', ':update<CR> :source<CR>')
@@ -62,7 +66,7 @@ vim.keymap.set({ 'n' }, '<leader>gp', ':Gitsigns next_hunk<CR>')
 vim.keymap.set({ 'n' }, '<leader>nt', ':Neotree reveal<CR>')
 
 vim.cmd('packadd! nohlsearch')
-vim.cmd.colorscheme("retrobox")
+vim.cmd.colorscheme("habamax")
 
 -- Plugins
 vim.pack.add({
