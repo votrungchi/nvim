@@ -102,9 +102,9 @@ require("CopilotChat").setup({
     temperature = 0.1,
     window = {
       layout = 'vertical',
-      width = 0.5,
+      width = 0.50,
     },
-    separator = '━━',
+    separator = '--',
     auto_fold = false,
     auto_insert_mode = true,
 })
