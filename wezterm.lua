@@ -15,6 +15,7 @@ config.use_fancy_tab_bar = false
 config.hide_tab_bar_if_only_one_tab = false
 config.tab_and_split_indices_are_zero_based = true
 config.scrollback_lines = 20000
+config.term = "xterm-256color"
 
 config.default_prog = { "C:\\Program Files\\PowerShell\\7\\pwsh.exe", "-l" }
 
